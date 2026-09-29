@@ -1,32 +1,83 @@
-# SIAKAD SMA Pemberdayaan Bangsa
+# SIAKAD AI — SMA Pemberdayaan Bangsa
 
-Frontend demo Sistem Informasi Akademik untuk SMA Pemberdayaan Bangsa, Ngrayun, Ponorogo. Dibuat dengan HTML, CSS, dan JavaScript tanpa framework.
+## Overview
 
-## Menjalankan
+This repository now includes a Next.js App Router foundation for the SIAKAD AI platform, using TypeScript, Tailwind CSS, shadcn/ui-style components, and Supabase-ready structure.
 
-1. Letakkan folder project di `C:\xampp\htdocs\ui ux siakad`.
-2. Jalankan Apache dari XAMPP.
-3. Buka `http://localhost/ui%20ux%20siakad/` untuk Developer Control Center.
-4. Buka `http://localhost/ui%20ux%20siakad/pages/beranda.html` untuk landing page sekolah.
+## Stack
 
-Tidak ada proses build atau instalasi dependency untuk versi frontend ini.
+- Next.js 14 App Router
+- TypeScript
+- Tailwind CSS
+- Supabase Auth + Postgres + Storage + RLS
+- Gemini-ready AI evaluation endpoint
 
-## Halaman
+## Structure
 
-- `index.html`: Developer Control Center untuk role, permission, feature, konfigurasi, audit, dan backup demo.
-- `pages/beranda.html`: landing page sekolah dan portal akademik terpadu.
-- `pages/dashboard.html`: dashboard akademik mandiri.
-- `pages/siswa.html`, `guru.html`, `kelas.html`, `mapel.html`, `jadwal.html`, `nilai.html`, `pendaftaran.html`, dan `pengumuman.html`: modul data akademik.
-- `pages/absensi.html` dan `pages/ujian.html`: simulasi alur absensi dan ujian.
+```bash
+app/
+  api/
+    attendance/route.ts
+    exam/evaluate/route.ts
+  dashboard/page.tsx
+  developer/page.tsx
+  guru/page.tsx
+  murid/page.tsx
+  attendance/page.tsx
+  exam/page.tsx
+  globals.css
+  layout.tsx
+  page.tsx
+components/
+  attendance/geofence-attendance.tsx
+  exams/exam-proctoring-demo.tsx
+hooks/
+lib/
+  geofence.ts
+  supabase.ts
+  validation.ts
+  utils.ts
+supabase/
+  migrations/
+    001_initial_schema.sql
+```
 
-## Struktur
+## Setup
 
-- `assets/css/`: stylesheet landing, dashboard, dan modul.
-- `assets/js/core/`: runtime bersama untuk halaman akademik.
-- `assets/js/pages/`: interaksi spesifik setiap modul.
-- `colors.css` dan `style.css`: palet hijau dan stylesheet Developer Control Center.
-- `Laporan/`: dokumen proposal lokal; dokumen identitas pribadi tidak untuk dipublikasikan.
+1. Install dependencies:
 
-## Batasan Demo
+```bash
+npm install
+```
 
-Data CRUD disimpan pada `localStorage` browser. Face scan, liveness, geofence, validasi Wi-Fi, device binding, waktu server, dan pengawasan ujian hanya simulasi UI; fitur tersebut belum memberikan verifikasi atau keamanan produksi. Implementasi nyata memerlukan backend, autentikasi, database, dan validasi server.
+2. Configure Supabase environment variables in `.env.local`:
+
+```bash
+NEXT_PUBLIC_SUPABASE_URL=your-project-url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
+```
+
+3. Apply SQL migration in Supabase SQL Editor:
+
+```bash
+supabase/migrations/001_initial_schema.sql
+```
+
+4. Run development server:
+
+```bash
+npm run dev
+```
+
+## Included modules
+
+- RBAC role landing dashboard
+- Geofence attendance with GPS validation and selfie upload module
+- Secure CBT proctoring prototype with fullscreen and tab violation detection
+- AI exam evaluator endpoint with rubric-based scoring fallback
+- SQL DDL and RLS policies
+
+## Notes
+
+This is a working application foundation / prototype. The Gemini API integration is ready via environment variables and a fallback heuristic scorer is currently implemented for local development when no API key is provided.

@@ -1,16 +1,10 @@
-# Local environment and generated files
-.env
-.env.*
-!.env.example
-*.log
-Laporan/
+# See https://help.github.com/articles/ignoring-files/ for more information about ignoring files.
 
-# Dependency/build output
-node_modules/
 .next/
 out/
-coverage/
-
-# Operating system files
+node_modules/
+.env*
 .DS_Store
-Thumbs.db
+npm-debug.log*
+coverage/
+*.log
