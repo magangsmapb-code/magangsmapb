@@ -1,0 +1,16 @@
+# Local environment and generated files
+.env
+.env.*
+!.env.example
+*.log
+Laporan/
+
+# Dependency/build output
+node_modules/
+.next/
+out/
+coverage/
+
+# Operating system files
+.DS_Store
+Thumbs.db

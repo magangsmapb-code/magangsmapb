@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123b2d">
+  <meta name="description" content="Developer Control Center SIAKAD SMA Pemberdayaan Bangsa.">
+  <title>Developer Control Center | SIAKAD</title>
+  <link rel="stylesheet" href="colors.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="index.html"><span class="brand-mark">PB</span><span><strong>SI AKAD</strong><small>DEVELOPER CONTROL</small></span></a>
+      <div class="workspace-label">SMA PEMBERDAYAAN BANGSA</div>
+      <nav id="mainNav" class="main-nav" aria-label="Developer navigation"></nav>
+      <div class="sidebar-footer"><span class="system-live"><i></i> Frontend simulation</span><a href="pages/beranda.html" class="school-link">↗ <span>Beranda sekolah</span></a></div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Buka navigasi">☰</button>
+        <div class="breadcrumbs"><span>Control Center</span><span class="crumb-slash">/</span><strong id="currentCrumb">Dashboard</strong></div>
+        <div class="topbar-right">
+          <label class="global-search"><span>⌕</span><input id="globalSearch" type="search" placeholder="Cari menu, fitur, user…" aria-label="Pencarian global"></label>
+          <label class="role-preview-wrap"><span>Preview role</span><select id="rolePreview" aria-label="Pratinjau menu role"><option value="DEVELOPER">Developer</option><option value="ADMIN">Admin</option><option value="TEACHER">Guru</option><option value="STUDENT">Siswa</option><option value="PARENT">Orang Tua/Wali</option><option value="TREASURER">Bendahara</option></select></label>
+          <button class="icon-action" id="notificationsButton" title="Notifikasi" aria-label="Notifikasi">♧<b id="notificationCount">0</b></button>
+          <div class="developer-profile"><span class="profile-avatar">D</span><span><strong>Developer</strong><small>Superuser lokal</small></span><span class="profile-caret">⌄</span></div>
+        </div>
+      </header>
+      <section class="content-area" id="contentArea" tabindex="-1"></section>
+      <footer class="app-footer"><span>SI AKAD · SMA Pemberdayaan Bangsa</span><span>Control Center <b>●</b> Local demo</span></footer>
+    </main>
+  </div>
+  <div id="toastRegion" class="toast-region" aria-live="polite" aria-atomic="true"></div>
+  <dialog id="entityDialog" class="entity-dialog"><form id="entityForm"><div class="dialog-heading"><div><span class="eyebrow" id="dialogEyebrow">SYSTEM</span><h2 id="dialogTitle">Tambah data</h2></div><button class="icon-action close-dialog" type="button" data-close-dialog aria-label="Tutup">×</button></div><div id="dialogFields" class="dialog-fields"></div><div class="dialog-actions"><button class="btn btn-muted" type="button" data-close-dialog>Batal</button><button class="btn btn-primary" type="submit">Simpan perubahan</button></div></form></dialog>
+  <dialog id="confirmDialog" class="confirm-dialog"><div class="confirm-copy"><span class="confirm-icon">!</span><h2 id="confirmTitle">Konfirmasi perubahan</h2><p id="confirmMessage">Perubahan ini akan dicatat ke Audit Log.</p></div><div class="dialog-actions"><button class="btn btn-muted" type="button" data-confirm-cancel>Batal</button><button class="btn btn-danger" type="button" data-confirm-accept>Ya, lanjutkan</button></div></dialog>
+</body>
+</html>

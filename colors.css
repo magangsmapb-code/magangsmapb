@@ -1,0 +1,23 @@
+:root {
+  --brand-950: #123b2d;
+  --brand-900: #174b38;
+  --brand-800: #246747;
+  --accent-700: #287a52;
+  --accent-600: #318b60;
+  --accent-100: #e3f2e9;
+  --accent-050: #f2f8f4;
+  --accent-200: #cce4d4;
+  --ink: #203244;
+  --muted: #718092;
+  --line: #e4eaf0;
+  --surface: #fff;
+  --canvas: #f3f6f4;
+  --green: #23815f;
+  --green-bg: #e8f5ef;
+  --amber: #a76a18;
+  --amber-bg: #fff4df;
+  --red: #ad4545;
+  --red-bg: #fbecec;
+  --shadow: 0 8px 24px rgba(18, 59, 45, .08);
+  --focus-ring: rgba(40, 122, 82, .25);
+}

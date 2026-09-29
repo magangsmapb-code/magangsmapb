@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4ec">
+  <title>Ujian Aman | SMA Pemberdayaan Bangsa</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/ujian.css">
+</head>
+<body data-page="exam">
+  <div class="dashboard-view page-view">
+    <aside class="sidebar"><a class="brand sidebar-brand" href="beranda.html"><span class="brand-mark">PB</span><span class="brand-copy"><strong>SMA Pemberdayaan</strong><small>SISTEM AKADEMIK</small></span></a><div class="sidebar-label">MENU UTAMA</div><nav class="side-nav" id="sideNav" aria-label="Menu dashboard"></nav><div class="sidebar-bottom"><div class="school-mini"><span class="mini-dot"></span><span><strong>Tahun ajaran</strong><small>2025 / 2026 · Ganjil</small></span></div><a class="back-home" href="beranda.html">← <span>Kembali ke beranda</span></a></div></aside>
+    <main class="dashboard-main">
+      <header class="dashboard-topbar"><div class="breadcrumb"><a href="dashboard.html">Portal sekolah</a><span>/</span><strong>Ujian</strong></div><div class="topbar-actions"><span class="today-label" id="examServerClock">Waktu server belum tersambung</span><div class="user-chip"><span class="avatar">S</span><span><strong>Peserta didik</strong><small id="participantIdentity">Belum terverifikasi</small></span></div></div></header>
+      <section class="dashboard-content exam-content">
+        <div class="page-heading"><div><div class="section-kicker"><span>UJIAN DIGITAL</span><span>PEMERIKSAAN SEBELUM MULAI</span></div><h1>Ruang ujian</h1><p>Pastikan identitas peserta dan perangkat sudah memenuhi syarat ujian.</p></div><span class="exam-demo-badge">SIMULASI TERSEDIA</span></div>
+        <div class="exam-warning" role="note"><strong>Batasan browser</strong><span>Browser tidak dapat mencegah peserta berpindah aplikasi atau mengambil rekaman layar. Mode layar penuh dan deteksi fokus hanya memberi peringatan; pengawasan dan validasi tetap memerlukan server/perangkat terkelola.</span></div>
+        <section class="panel preflight-panel"><div class="panel-heading"><h2>Verifikasi sebelum ujian</h2><span id="preflightSummary">Menunggu pemeriksaan server</span></div><div class="preflight-grid">
+          <article class="preflight-item"><span class="preflight-icon">◉</span><div><strong>Face scan</strong><small id="faceCheck">Belum diverifikasi</small></div><span class="check-indicator" id="faceIndicator">—</span></article>
+          <article class="preflight-item"><span class="preflight-icon">✳</span><div><strong>Liveness detection</strong><small id="livenessCheck">Belum diverifikasi</small></div><span class="check-indicator" id="livenessIndicator">—</span></article>
+          <article class="preflight-item"><span class="preflight-icon">⌖</span><div><strong>GPS + geofence</strong><small id="gpsCheck">Belum diverifikasi</small></div><span class="check-indicator" id="gpsIndicator">—</span></article>
+          <article class="preflight-item"><span class="preflight-icon">▣</span><div><strong>Device binding</strong><small id="deviceCheck">Belum diverifikasi</small></div><span class="check-indicator" id="deviceIndicator">—</span></article>
+          <article class="preflight-item"><span class="preflight-icon">◷</span><div><strong>Waktu server</strong><small id="timeCheck">Belum tersambung</small></div><span class="check-indicator" id="timeIndicator">—</span></article>
+          <article class="preflight-item"><span class="preflight-icon">♙</span><div><strong>Status peserta</strong><small id="participantCheck">Belum diverifikasi</small></div><span class="check-indicator" id="participantIndicator">—</span></article>
+        </div><div class="preflight-actions"><button class="button button-light" id="verifyExam" type="button">Verifikasi ke server</button><button class="button button-dark" id="startOfficialExam" type="button" disabled>Mulai ujian resmi <span aria-hidden="true">↗</span></button></div><p class="preflight-note" id="preflightNote">Ujian resmi hanya dimulai jika server mengembalikan seluruh pemeriksaan valid dan tiket sesi aktif.</p></section>
+        <section class="panel simulation-panel"><div><span class="simulation-kicker">LATIHAN ANTARMUKA</span><h2>Coba mode ujian simulasi</h2><p>Contoh soal, timer lokal, autosave, fullscreen, dan monitor fokus dapat dicoba tanpa mengirim nilai atau mengklaim verifikasi resmi.</p></div><button class="button button-dark" id="startSimulation" type="button">Mulai simulasi <span aria-hidden="true">↗</span></button></section>
+        <section class="exam-session" id="examSession" hidden>
+          <div class="session-banner"><div><span class="simulation-kicker" id="sessionMode">MODE SIMULASI</span><h2 id="examTitle">Latihan Biologi</h2></div><div class="session-status"><span class="connection-pill" id="connectionStatus">Memeriksa internet…</span><div class="timer-block"><small>SISA WAKTU</small><strong id="examTimer">20:00</strong></div></div></div>
+          <div class="session-layout"><section class="panel question-panel"><div class="question-top"><span id="questionNumber">SOAL 01 / 01</span><span id="saveStatus">Jawaban tersimpan lokal</span></div><h3>Bagian sel tumbuhan yang berfungsi sebagai tempat utama fotosintesis adalah…</h3><fieldset class="answer-options"><legend>Pilih satu jawaban</legend><label><input type="radio" name="answer" value="A"><span>A</span> Mitokondria</label><label><input type="radio" name="answer" value="B"><span>B</span> Kloroplas</label><label><input type="radio" name="answer" value="C"><span>C</span> Ribosom</label><label><input type="radio" name="answer" value="D"><span>D</span> Membran sel</label></fieldset><label class="essay-label" for="essayAnswer">Catatan jawaban</label><textarea id="essayAnswer" class="field-control essay-answer" placeholder="Ketik jawaban di sini…"></textarea><div class="question-footer"><span>Jawaban disimpan otomatis saat mengetik.</span><button class="button button-dark" id="finishExam" type="button">Akhiri simulasi</button></div></section>
+            <aside class="session-side"><section class="panel monitor-panel"><div class="panel-heading"><h2>Monitor sesi</h2><span id="focusStatus">Fokus aktif</span></div><div class="monitor-stats"><div><strong id="focusLossCount">0</strong><span>perpindahan fokus</span></div><div><strong id="networkLossCount">0</strong><span>putus koneksi</span></div></div><p class="monitor-note">Sinyal browser dicatat lokal. Server harus menerima dan memvalidasi log.</p><ol id="eventLog" class="event-log"><li>Menunggu aktivitas sesi.</li></ol></section><section class="panel lock-panel"><span class="lock-symbol">▣</span><div><strong>Fullscreen</strong><small id="fullscreenStatus">Belum aktif</small></div><button class="icon-button" id="toggleFullscreen" type="button" title="Masuk layar penuh" aria-label="Masuk layar penuh">⛶</button></section><p class="screen-capture-note">Pembatasan screenshot/rekam layar tidak tersedia di browser web biasa.</p></aside>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+  <script src="../assets/js/core/page-runtime.js" defer></script>
+  <script src="../assets/js/pages/ujian.js" defer></script>
+</body>
+</html>

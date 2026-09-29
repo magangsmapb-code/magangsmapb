@@ -1,0 +1,65 @@
+.attendance-content { max-width: 1120px; }
+.demo-badge { padding: 7px 10px; border: 1px solid #e6c49a; color: #98643b; font-size: 8px; font-weight: 700; letter-spacing: .08em; }
+.attendance-alert { display: flex; align-items: center; gap: 12px; margin-bottom: 15px; padding: 13px 15px; border: 1px solid #e6d3af; background: #fff8e8; color: #775936; }
+.alert-mark { width: 22px; height: 22px; display: grid; place-items: center; border-radius: 50%; background: #f1dfbd; font-weight: 700; }
+.attendance-alert p { margin: 0; font-size: 10px; line-height: 1.6; }
+.attendance-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; }
+.attendance-card { min-width: 0; padding: 17px; }
+.attendance-card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 17px; }
+.attendance-card-head > div { display: flex; align-items: baseline; gap: 9px; }
+.card-index { color: var(--rust); font-size: 8px; font-weight: 700; }
+.attendance-card h2 { margin: 0; font: 700 13px var(--font-display); }
+.state-pill { padding: 5px 7px; border-radius: 2px; background: #f0f0e9; color: #7c8176; font-size: 8px; white-space: nowrap; }
+.state-preview { background: #e7efda; color: #526744; }
+.camera-frame { position: relative; aspect-ratio: 16 / 8.8; overflow: hidden; display: grid; place-items: center; background: #172820; }
+.camera-frame video { width: 100%; height: 100%; object-fit: cover; transform: scaleX(-1); }
+.camera-placeholder { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #b8c7b6; }
+.camera-placeholder span { font-size: 24px; }
+.camera-placeholder p { margin: 7px 0 0; font-size: 9px; }
+.camera-frame.is-live .camera-placeholder { display: none; }
+.camera-corner { position: absolute; width: 27px; height: 27px; border-color: var(--lime); border-style: solid; }
+.camera-corner-a { top: 12px; left: 12px; border-width: 1px 0 0 1px; }
+.camera-corner-b { right: 12px; bottom: 12px; border-width: 0 1px 1px 0; }
+.challenge-row { min-height: 55px; display: flex; align-items: center; justify-content: space-between; gap: 12px; border-bottom: 1px solid #edf0e8; }
+.challenge-row > div { display: grid; gap: 5px; }
+.field-caption { color: #969b91; font-size: 7px; font-weight: 700; letter-spacing: .1em; }
+.challenge-row strong { font-size: 10px; }
+.attendance-actions { display: flex; align-items: center; gap: 8px; margin-top: 13px; }
+.attendance-actions .button { min-height: 34px; font-size: 9px; }
+.card-footnote { margin: 12px 0 0; color: #858e83; font-size: 8px; line-height: 1.65; }
+.location-readout, .device-readout { min-height: 76px; display: flex; align-items: center; gap: 12px; padding: 12px; background: #f7f8f2; }
+.location-icon, .device-icon { width: 33px; height: 33px; display: grid; place-items: center; background: #e8eddc; color: var(--forest); font-size: 20px; }
+.location-readout > div, .device-readout > div { display: grid; gap: 6px; }
+.location-readout strong, .device-readout strong { font-size: 10px; }
+.location-readout small, .device-readout small { color: #858e83; font-size: 8px; }
+.fence-meter { height: 4px; margin-top: 11px; overflow: hidden; background: #e8ebe3; }
+.fence-meter span { width: 0; height: 100%; display: block; background: #7c956c; transition: width .3s; }
+.check-row { min-height: 68px; display: flex; align-items: center; gap: 10px; border-top: 1px solid #edf0e8; border-bottom: 1px solid #edf0e8; }
+.check-icon { width: 30px; height: 30px; display: grid; place-items: center; background: #f1f1e9; color: #667363; font-size: 17px; }
+.check-row > div { flex: 1; display: grid; gap: 5px; }
+.check-row strong { font-size: 10px; }
+.check-row small { color: #858e83; font-size: 8px; }
+.check-state { color: #9b9e94; font-size: 12px; }
+.full-button { width: 100%; margin-top: 11px; min-height: 34px; font-size: 9px; }
+.server-clock { margin: 6px 0; font: 700 28px var(--font-display); letter-spacing: -.04em; }
+.server-date { color: #828c81; font-size: 9px; }
+.attendance-card code { color: #617062; font-size: 8px; }
+.qr-body { display: flex; align-items: center; gap: 16px; }
+.qr-frame { position: relative; width: 130px; height: 130px; flex: 0 0 130px; display: grid; place-items: center; border: 1px solid #e5e8e0; background: #fff; }
+.qr-frame canvas, .qr-frame img { max-width: 116px; max-height: 116px; }
+.qr-frame #qrFallback { position: absolute; display: none; width: 100px; color: #858e83; font-size: 8px; text-align: center; }
+.qr-info { min-width: 0; display: grid; gap: 7px; }
+.qr-info strong { font: 700 27px var(--font-display); }
+.qr-info > span { color: #828c81; font-size: 8px; }
+.qr-info code { overflow-wrap: anywhere; }
+.attendance-config { margin-top: 14px; padding: 0 16px; }
+.attendance-config summary { padding: 15px 0; color: var(--ink); font-size: 10px; font-weight: 700; cursor: pointer; }
+.config-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; padding: 0 0 16px; }
+.config-fields label { display: grid; gap: 6px; color: #69756a; font-size: 8px; font-weight: 600; }
+.config-fields .button { align-self: end; justify-self: start; min-height: 36px; font-size: 9px; }
+.attendance-submit { margin-top: 14px; padding: 15px; display: flex; justify-content: space-between; align-items: center; gap: 14px; border: 1px solid #e6e8e0; background: #fffefa; }
+.attendance-submit strong { font: 700 11px var(--font-display); }
+.attendance-submit p { margin: 5px 0 0; color: #858e83; font-size: 8px; line-height: 1.5; }
+.attendance-submit button:disabled { background: #c8ccc3; color: #717970; cursor: not-allowed; transform: none; }
+@media (max-width: 680px) { .attendance-grid { grid-template-columns: 1fr; } .attendance-content .page-heading { align-items: flex-start; flex-direction: row; } .demo-badge { margin-top: 4px; } .attendance-submit { align-items: stretch; flex-direction: column; } .attendance-submit button { width: 100%; } }
+@media (max-width: 420px) { .config-fields { grid-template-columns: 1fr; } .qr-frame { width: 112px; height: 112px; flex-basis: 112px; } .qr-frame canvas, .qr-frame img { max-width: 100px; max-height: 100px; } .attendance-card { padding: 13px; } }
